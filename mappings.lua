@@ -18,6 +18,7 @@ M.general = {
 
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "LazyGit" },
 
+    ["<leader>i"] = { "<cmd> Telescope import <CR>", "Imports" },
     ["<leader>b"] = { "<cmd> Telescope buffers <CR>", "Buffers" },
     -- ["<leader>n"] = { "<cmd> Dashboard <CR>", "DashBoard" },
     ["<leader>ss"] = { "<cmd> SessionManager load_session<CR>", "Select Session to Load" },

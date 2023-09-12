@@ -24,7 +24,7 @@ M.telescope = {
       },
     },
   },
-  extensions_list = { "themes", "terms", "aerial", },
+  extensions_list = { "themes", "terms", "aerial", "import", },
 }
 
 M.mason = {

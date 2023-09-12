@@ -117,6 +117,15 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim", },
   },
 
+
+  { 'piersolenski/telescope-import.nvim',
+    requires = 'nvim-telescope/telescope.nvim',
+    config = function()
+      require("telescope").load_extension("import")
+    end
+  },
+
+
   {
     "utilyre/barbecue.nvim",
     name = "barbecue",
