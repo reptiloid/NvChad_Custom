@@ -6,8 +6,19 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
+  Search = {
+    italic = true,
+    bold = true,
+    bg = "#612939",
+    fg = "#f0f600"
+  },
   Comment = {
     italic = true,
+  },
+  Folded = {
+    italic = true,
+    bg = "black2",
+    fg = "grey_fg2",
   },
   NvDashAscii = {
     bg = "none",

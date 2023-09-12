@@ -6,11 +6,10 @@ end
 
 
 db.setup({
-    theme = 'hyper',
+  theme = 'hyper',
   config = {
-    week_header = {
-     enable = true,
-    },
+    disable_move = false,
+    week_header = { enable = true, },
     shortcut = {
       { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
       {

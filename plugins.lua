@@ -54,6 +54,7 @@ local plugins = {
 
   {
     "rhysd/clever-f.vim",
+    enabled = false,
     event = "InsertEnter",
     config = function()
       require "custom.configs.clever-f"
@@ -74,7 +75,7 @@ local plugins = {
     config = function()
       require "custom.configs.db-nvim"
     end,
-    dependencies = { {"nvim-tree/nvim-web-devicons"}}
+    dependencies = {{"nvim-tree/nvim-web-devicons"}}
   },
 
   {
@@ -83,6 +84,15 @@ local plugins = {
     config = function()
       require "custom.configs.aerial"
     end,
+  },
+
+  {
+    "folke/drop.nvim",
+    event = "VimEnter",
+    config = function()
+      require "custom.configs.drop"
+    end,
+    enabled = false,
   },
 
   {
@@ -106,19 +116,27 @@ local plugins = {
     -- optional for floating window border decoration
     dependencies = { "nvim-lua/plenary.nvim", },
   },
-  -- {
-  --   "ahmedkhalf/project.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require "custom.configs.project"
-  --   end,
-  -- },
 
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    config = function()
+      -- require("barbecue").setup()
+      require "custom.configs.barbecue"
+    end,
+    lazy=false,
+    enabled = false,
+  },
   -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    enabled = false
+  },
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`

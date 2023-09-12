@@ -5,6 +5,7 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+    "python",
   },
   indent = {
     enable = true,
@@ -38,6 +39,10 @@ M.mason = {
 M.nvimtree = {
   filters = {
     exclude = {"custom"},
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = true,
   },
   git = {
     enable = true,
