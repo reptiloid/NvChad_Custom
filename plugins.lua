@@ -54,12 +54,32 @@ local plugins = {
 
   {
     "rhysd/clever-f.vim",
-    enabled = false,
-    event = "InsertEnter",
+    enabled = true,
+    lazy = false,
+    -- event = "InsertEnter",
     config = function()
       require "custom.configs.clever-f"
     end,
   },
+
+  {
+    "gbprod/yanky.nvim",
+    enabled = true,
+    lazy = false,
+    config = function()
+      require "custom.configs.yanky"
+    end,
+  },
+
+  {
+    "nvim-pack/nvim-spectre",
+    enabled = true,
+    dependencies = { "nvim-lua/plenary.nvim", },
+    config = function()
+      require('spectre').setup()
+    end,
+  },
+
 
   {
     "Shatur/neovim-session-manager",
